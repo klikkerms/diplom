@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Дипломная работа</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="form-block">
+<form method="POST">
+    <textarea id="user_input" name="user_input" rows="4" cols="50" placeholder="Введите текст">{{ user_input }}</textarea><br>
+    <input type="submit" value="Редактировать">
+</form>
+</div>
+{% if upper %}
+<p>Исходный текст:</p>
+<p>{{ user_input }}</p>
+<p>Отредактированный текст:</p>
+<p>{{ upper }}</p>
+{% endif %}
+</body>
+</html>
